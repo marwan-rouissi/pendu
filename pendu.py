@@ -9,13 +9,13 @@ def difficulty():
     mouse = pygame.mouse.get_pos()
     if easy_btn.isOver(mouse):
         difficulty_state = "easy"
-        print(difficulty_state)
+        # print(difficulty_state)
     elif medium_btn.isOver(mouse):
         difficulty_state = "medium"
-        print(difficulty_state)
+        # print(difficulty_state)
     elif hard_btn.isOver(mouse):
         difficulty_state = "hard"
-        print(difficulty_state)
+        # print(difficulty_state)
     return difficulty_state
 
 # fonction pour choisir un mot random depuis la liste de jeu
@@ -63,7 +63,7 @@ def random_word(difficulty_var):
 
     #selection aléatoire d'un mot depuis le fichier ouvert
     word_pos = random.randint(0, len(words)-1)
-    print("mot numéro:", (word_pos)+1)
+    # print("mot numéro:", (word_pos)+1)
 
     # la fonction prend pour valeur le mot pioché
     return(words[word_pos])
@@ -639,10 +639,13 @@ class Game:
 
                         # si la touche pressée est présente dans le mot joué et que le nombre de tentatives est inférieur à 7 
                         if event.unicode == char and strike < 7:
-                            # print la lettre
-                            print("lettre jouée:", char)
-                            # print le mot
-                            print("mot à deviner:", word)
+
+                            # décommanter les lignes suivantes pour tester le code sans avoir à jouer et deviner les mots
+                            
+                            # # print la lettre
+                            # print("lettre jouée:", char)
+                            # # print le mot
+                            # print("mot à deviner:", word)
 
                             # pour i dans l'interval (longueur du mot)
                             for i in range(len(word)):

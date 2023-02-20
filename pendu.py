@@ -32,7 +32,7 @@ def add_score(name):
     global score_var
 
     with open("scores.txt", "a", encoding="UTF-8") as file:
-        element_to_add = name +" : "+ str(score_var) + " mots deviné."
+        element_to_add = name +" : "+ str(score_var) + " mots " + "(mode: " + difficulty_var + ")"
         # element_to_add = (name , score_var)
         file.write(element_to_add)
         file.write("\n")
